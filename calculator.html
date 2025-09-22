@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenBite | Calorie & Nutrition Calculator</title>
+  <!-- ONE stylesheet only -->
+  <link rel="stylesheet" href="script/style.css"/>
+</head>
+<body>
+  <!-- ===== Header (same mold) ===== -->
+  <header class="header">
+    <div class="logo">GreenBite</div>
+    <div class="nav-right">
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="calculator.html" class="active">Calculator</a></li>
+          <li><a href="workout.html">Workouts</a></li>
+          <li><a href="mindfulness.html">Mindfulness</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="signin-btn">Sign In</a>
+    </div>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main class="calc-main container">
+    <!-- Inputs -->
+    <section class="card">
+      <h2 class="card-title">Enter Your Details</h2>
+
+      <form id="calc-form" class="calc-form">
+        <label>
+          <span>Age (years)</span>
+          <input id="age" type="number" min="10" max="120" required/>
+        </label>
+
+        <label>
+          <span>Gender</span>
+          <select id="gender" required>
+            <option value="" selected disabled>Choose…</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Height (cm)</span>
+          <input id="height" type="number" min="120" max="230" required/>
+        </label>
+
+        <label>
+          <span>Weight (kg)</span>
+          <input id="weight" type="number" min="30" max="300" required/>
+        </label>
+
+        <label>
+          <span>Activity Level</span>
+          <select id="activity" required>
+            <option value="" selected disabled>Choose…</option>
+            <option value="1.2">Sedentary — little/no exercise</option>
+            <option value="1.375">Lightly active — 1–3 days/week</option>
+            <option value="1.55">Moderately active — 3–5 days/week</option>
+            <option value="1.725">Very active — 6–7 days/week</option>
+            <option value="1.9">Super active — physical job/very hard</option>
+          </select>
+        </label>
+
+        <button id="calc-btn" class="btn" type="submit">Calculate</button>
+        <p id="calc-error" class="error"></p>
+      </form>
+    </section>
+
+    <!-- Results -->
+    <section class="card">
+      <h2 class="card-title">Results</h2>
+
+      <div class="result-grid">
+        <div class="result-item">
+          <h3>BMR (Basal Metabolic Rate)</h3>
+          <div id="bmr" class="number">–</div>
+        </div>
+
+        <div class="result-item">
+          <h3>TDEE (Total Daily Energy Expenditure)</h3>
+          <div id="tdee" class="number">–</div>
+        </div>
+      </div>
+
+      <!-- Macros -->
+      <div class="macro-wrap">
+        <div class="macro">
+          <div class="macro-head">
+            <span>Carbs</span>
+            <span id="carb-grams">0 g</span>
+          </div>
+          <div class="bar"><span id="carb-bar"></span></div>
+        </div>
+
+        <div class="macro">
+          <div class="macro-head">
+            <span>Protein</span>
+            <span id="protein-grams">0 g</span>
+          </div>
+          <div class="bar"><span id="protein-bar"></span></div>
+        </div>
+
+        <div class="macro">
+          <div class="macro-head">
+            <span>Fat</span>
+            <span id="fat-grams">0 g</span>
+          </div>
+          <div class="bar"><span id="fat-bar"></span></div>
+        </div>
+      </div>
+
+      <!--
+      <p class="hint">
+        *Mifflin–St Jeor for BMR. Macros use 50/20/30 split:
+        4 kcal/g (carbs, protein), 9 kcal/g (fat).
+      </p>-->
+    </section>
+  </main> 
+
+  <!-- ===== Footer (same mold) ===== -->
+  <footer class="footer">
+    <div class="footer-row">
+      <section class="newsletter">
+        <h3>Newsletter Subscription</h3>
+        <p class="small">Sign up and never miss a thing</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email"/>
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+
+      <section class="socials">
+        <p class="small">Follow us and get in on the latest trends</p>
+        <div class="social-dots">
+          <a href="#" class="dot"><img src="images/ytlogo.png" alt="YouTube"></a>
+          <a href="#" class="dot"><img src="images/iglogo.png" alt="Instagram"></a>
+          <a href="#" class="dot"><img src="images/fblogo.png" alt="Facebook"></a>
+          <a href="#" class="dot"><img src="images/ttlogo.png" alt="TikTok"></a>
+        </div>
+      </section>
+    </div>
+    <div class="container copy">
+      <small>© 2025 GreenBite. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- ONE script only -->
+  <script src="script/script.js" defer></script>
+</body>
+</html>

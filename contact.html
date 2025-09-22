@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite | Contact</title>
+  <link rel="stylesheet" href="script/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">GreenBite</div>
+    <div class="nav-right">
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="workout.html">Workouts</a></li>
+          <li><a href="mindfulness.html">Mindfulness</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="signin-btn">Sign In</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Feedback Form -->
+    <section class="contact-form">
+      <h2>Tell us what you think</h2>
+      <form id="feedback-form" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="feedback">Message:</label>
+        <textarea id="feedback" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="feedback-message" class="confirm"></p>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <h2>Find Us Here</h2>
+      <div class="map-box">
+        <!-- Embedded Google Map -->
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019062259653!2d-122.419415!3d37.774929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5c7a7aef%3A0x4b76f0bbfe9c3a5c!2sGreenBite%20HQ!5e0!3m2!1sen!2s!4v1234567890"
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">What is GreenBite?</button>
+        <div class="faq-answer">
+          <p>GreenBite is a platform promoting healthy recipes, workouts, and mindfulness tips for a balanced lifestyle.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How can I subscribe to the newsletter?</button>
+        <div class="faq-answer">
+          <p>You can subscribe using the form in the footer. Just enter your email and click "Subscribe".</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can I submit my own recipes?</button>
+        <div class="faq-answer">
+          <p>Yes! We encourage community submissions. Use the Contact form to get in touch with us.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-row">
+      <!-- Newsletter -->
+      <section class="newsletter">
+        <h3>Newsletter Subscription</h3>
+        <p class="small">Sign up and never miss a thing</p>
+        <form id="newsletter-form" class="newsletter-form" novalidate>
+          <input id="newsletter-email" type="email" placeholder="Email" required />
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p id="newsletter-feedback" class="tiny"></p>
+      </section>
+
+      <!-- Socials -->
+      <section class="socials">
+        <p class="small">Follow us and get in on the latest trends</p>
+        <div class="social-dots">
+          <a href="#" class="dot"><img src="images/ytlogo.png" alt="youtube"></a>
+          <a href="#" class="dot"><img src="images/iglogo.png" alt="instagram"></a>
+          <a href="#" class="dot"><img src="images/fblogo.png" alt="facebook"></a>
+          <a href="#" class="dot"><img src="images/ttlogo.png" alt="tiktok"></a>
+        </div>
+      </section>
+    </div>
+    <div class="copy">
+      <small>© 2025 GreenBite. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script/contact.js" defer></script>
+</body>
+</html>

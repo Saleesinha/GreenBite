@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenBite | Mindfulness</title>
+  <link rel="stylesheet" href="script/style.css"> <!-- link to CSS -->
+</head>
+<body>
+  <!-- HEADER (reuse your existing header) -->
+  <header class="header">
+    <div class="logo">GreenBite</div>
+    <div class="nav-right">
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="workout.html">Workouts</a></li>
+          <li><a href="mindfulness.html" class="active">Mindfulness</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="signin-btn">Sign In</a>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="mindfulness">
+
+    <!-- GUIDED BREATHING -->
+    <section class="breathing-box">
+      <h2>Guided Breathing</h2>
+      <div id="breathing-circle">Inhale</div> <!-- Circle expands/contracts -->
+    </section>
+
+    <!-- TIMER -->
+    <section class="timer-box">
+      <h2>Timer</h2>
+      <label for="minutes">Set Timer (minutes):</label>
+      <input type="number" id="minutes" min="1" value="1">
+      <button id="start-timer">Start Timer</button>
+      <div id="timer-display">00:00</div>
+    </section>
+
+    <!-- AMBIENT SOUNDS -->
+    <section class="sounds-box">
+      <h2>Ambient Tones</h2>
+      <button class="sound-btn" data-sound="rain">Rain</button>
+      <button class="sound-btn" data-sound="nature">Nature</button>
+      <button class="sound-btn" data-sound="ocean">Ocean</button>
+      <button class="sound-btn" data-sound="off">Off</button>
+    </section>
+
+    <!-- COMPLETED SESSIONS -->
+    <section class="sessions-box">
+      <h2>Completed Session</h2>
+      <p>You have completed: <span id="session-count">0</span> sessions</p>
+    </section>
+  </main>
+
+  <!-- FOOTER (reuse your footer) -->
+  <footer class="footer">
+    <div class="footer-row">
+      <section class="newsletter">
+        <h3>Newsletter Subscription</h3>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+      <section class="socials">
+        <p class="small">Follow us and get in on the latest trends</p>
+        <div class="social-dots">
+          <a href="#" class="dot"><img src="images/ytlogo.png" alt="YouTube"></a>
+          <a href="#" class="dot"><img src="images/iglogo.png" alt="Instagram"></a>
+          <a href="#" class="dot"><img src="images/fblogo.png" alt="Facebook"></a>
+          <a href="#" class="dot"><img src="images/ttlogo.png" alt="TikTok"></a>
+        </div>
+      </section>
+    </div>
+    <div class="copy">
+      <small>© 2025 GreenBite. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- LINK TO JAVASCRIPT -->
+  <script src="script/script.js" defer></script>
+   
+</body>
+</html>

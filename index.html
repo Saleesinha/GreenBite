@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenBite — Home</title>
+  <!-- This connects the CSS file for this page -->
+  <link rel="stylesheet" href="script/style.css"/>
+</head>
+<body>
+  <script src="script/script.js"></script>
+
+  <!-- HEADER / NAV -->
+<header class="header">
+  <div class="logo">GreenBite</div>
+  <div class="nav-right">
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="workout.html">Workouts</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="signin-btn">Sign In</a>
+  </div>
+</header>
+
+
+  <main>
+    <section class="hero hero-full">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <p id="rotating-text">“Eat Better, Live Better, Feel Better”</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+    <!-- TIP OF THE DAY + QUOTES (two columns) -->
+    <section class="highlights">
+  <div class="container highlights-row">
+    
+    <!-- Left side: only lightbulb image -->
+    <article class="card">
+      <img
+        class="tip-img"
+        src="images/homepage1.jpg"
+        alt="Tip lightbulb icon" /> <!-- // link your image -->
+    </article>
+
+    <!-- Right side: text for quote -->
+    <article class="card">
+      <h2 class="card-title">Tip Of The Day</h2>
+      <div id="DailyQuote" class="quote">
+        “Eat more greens today for a healthier tomorrow!”
+      </div>
+    </article>
+  </div>
+    </section>
+
+    <!-- DIVIDER BAND WITH MESSAGE -->
+    <!-- Separator band with background image -->
+    <section class="band">
+      <h2 class="band-line">Want To Eat Healthy?</h2>
+      <p class="band-sub">But don’t know how to?</p>
+    </section>
+
+
+    <section class="recipe-preview">
+      <div class="recipe-row">
+        <!-- Left side: Recipe Image -->
+        <div class="recipe-image">
+          <img src="images/Recipe1img.jpg" alt="Grilled Salmon & Veggie Quinoa"> <!-- // link your image -->
+      </div>
+
+      <!-- Right side: Recipe Text -->
+      <div class="recipe-info">
+        <h3 class="recipe-name">Grilled Salmon & Veggie Quinoa</h3>
+          <p class="recipe-description">
+            Fuel your body with a recipe that blends flavor and wellness in every bite.<br><br>
+            Packed with lean protein, wholesome grains, and vibrant vegetables, it’s designed for balance.<br><br>
+            This dish supports digestion, strengthens immunity, and delivers heart-healthy omega-3s.<br><br>
+            Simple ingredients come together to create a colorful, nourishing meal you’ll crave.<br><br>
+            Make it part of your weekly routine for energy, vitality, and long-term health.
+          </p>
+            <a href="recipes.html" class="btn-recipe">View Full Recipe &gt;&gt;&gt;</a> <!-- keep link empty for now -->
+      </div>
+    </section>
+
+
+  <!-- FOOTER: NEWSLETTER + SOCIALS -->
+  <footer class="footer">
+    <div class="footer-row"> <!-- wrapper row -->
+
+      <!-- Newsletter box -->
+      <section class="newsletter">
+        <h3>Newsletter Subscription</h3>
+        <p class="small">Sign up and never miss a thing</p>
+
+        <!-- JS will validate and save email to localStorage later -->
+        <form id="newsletter-form" class="newsletter-form" novalidate>
+          <input id="newsletter-email" type="email" placeholder="Email" required />
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+
+        <!-- JS will write success/error text in here -->
+        <p id="newsletter-feedback" class="tiny"></p>
+      </section>
+
+      <!-- Socials block -->
+      <section class="socials">
+        <p class="small">Follow us and get in on the latest trends</p>
+
+        <!-- These could later link to your real socials -->
+        <div class="social-dots">
+          <a href="#" class="dot"><img src="images/ytlogo.png" alt="youtube"></a>
+          <a href="#" class="dot"><img src="images/iglogo.png" alt="instagram"></a>
+          <a href="#" class="dot"> <img src="images/fblogo.png" alt="facebook"></a>
+          <a href="#" class="dot"><img src="images/ttlogo.png" alt="tiktok"></a>
+          
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Small copyright line -->
+    <div class="container copy">
+      <small>© 2025 GreenBite. All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="script/script.js" defer></script>
+
+</body>
+</html>

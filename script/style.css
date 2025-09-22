@@ -1,0 +1,822 @@
+/* Basic page defaults: font, colors, spacing */
+* { box-sizing: border-box; }
+.body {
+  margin: 0;                 /* remove default page margin */
+  font-family: Arial, Helvetica, sans-serif; /* simple, safe font */
+  color: #111;               /* dark text */
+  background: #fff;          /* white page background */
+  line-height: 1.5;          /* readable line spacing */
+}
+
+/* A centered wrapper for consistent page width */
+.container {
+  width: 92%;                /* small side gutters */
+  max-width: 1100px;         /* stop getting too wide on big screens */
+  margin: 0 auto;            /* center the container */
+}
+
+/* Simple button style (used for Sign In + Subscribe) */
+.btn {
+  display: inline-block;     /* make link look like a button */
+  padding: 10px 14px;        /* button size */
+  border: 1px solid #000;    /* thin black border */
+  background: #eee;          /* light grey button background */
+  text-decoration: none;     /* remove underline */
+  border-radius: 6px;        /* small rounded corners */
+  color: #111;               /* button text color */
+}
+
+/* ===== Header / Nav ===== */
+  .header {
+  background: #fff;                 /* white header background */
+  border-bottom: 1px solid #d7d7d7; /* subtle bottom border */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* logo left, everything else right */
+  padding: 12px 20px;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, nav+sign-in right */
+  padding: 12px 20px;
+}
+
+.logo {
+  background: #fff;                 /* white header background */
+  border-bottom: 1px solid #d7d7d7; /* subtle bottom border */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* logo left, everything else right */
+  padding: 12px 20px;
+}
+
+/* Nav + sign-in grouped together on right */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between nav and sign in */
+}
+
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav a {
+  color: #111;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav a.active {
+  color: #28be5a;             /* highlight active link */
+  font-weight: 700;
+  border-bottom: 2px solid #28be5a;
+}
+
+.signin-btn {
+  padding: 8px 14px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background: #fff;
+  text-decoration: none;
+  color: #000;
+}
+
+
+.hero {
+  background: #ffffff;  
+}
+
+.hero-row {
+  display: flex;             /* put three items in a row */
+  align-items: center;       /* vertically center the middle box */
+  gap: 12px;                 /* small gap between items */
+}
+ /*image under the rotating text*/
+.hero-full {
+  min-height: 400px; /* height of hero */
+  background-image: url("../images/Homepage1.jpg"); /* // link your hero image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  margin-left: calc(-50vw + 50%); /* break out of container */
+}
+
+.hero-content {
+  background: rgba(255,255,255,0.7); /* white overlay with 70% opacity */
+  padding: 30px 40px;
+  text-align: center;
+  max-width: 600px; /* limit width so text stays readable */
+  border-radius: 4px;
+}
+
+/* Text style */
+.hero-content p {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* Overlay container: centers the text box */
+.hero-overlay {
+  min-height: 400px; /* same as hero height */
+  display: flex;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
+}
+
+#rotating-text {
+
+  padding: 12px 18px;                /* space inside the box: 12px top/bottom, 18px left/right */
+  border-radius: 6px;                /* slightly rounded corners */
+  transition: opacity 1s ease; /* fade in/out over 1 second */
+  opacity: 1;                  /* start visible */
+}
+
+.hero-img {
+  width: 100%;               /* make image fill its column */
+  max-height: 180px;         /* simple short banner height */
+  object-fit: cover;         /* crop image nicely to fit box */
+  border: 1px solid #000;    /* thin black border to match wireframe */
+  background: #e5e5e5;       /* grey if image fails */
+}
+
+.rotating-box {
+  min-width: 160px;          /* narrow center column like mock */
+  text-align: center;        /* center the text */
+  background: #e5e5e5;       /* light grey box */
+  border: 1px solid #000;    /* thin black border */
+  padding: 18px 10px;        /* space inside the box */
+  font-weight: 600;          /* slightly bolder text */
+}
+
+
+/* ===== Highlights: Tip (left) + Quotes (right) ===== */
+.highlights {
+  background: #ffffff;          /* black background area */
+  padding: 28px 0;           /* space above/below content */
+}
+.highlights-row {
+  display: flex;             /* two columns side by side */
+  gap: 80px;                 /* space between the two cards */
+}
+
+.card {
+  background: #fff;
+  border: none;       /* remove border */
+  padding: 14px;
+  flex: 1;
+}
+
+.card-title { margin: 0 0 8px; }
+.tip-img {
+  width: 100%;               /* small image on the tip card */
+  max-width: 220px;          /* keep it small like the mock */
+  aspect-ratio: 1 / 1;       /* make it a square */
+  object-fit: cover;         /* crop nicely */
+  border: 1px solid #000;    /* thin frame like wireframe */
+  background: #e5e5e5;       /* grey if image missing */
+  display: block;            /* so margin works properly */
+  margin: 0px 0 8px;         /* space around image */
+}
+
+/* Tip image: make it big and centered */
+.tip-img {
+  width: 100%;              /* take full card width */
+  max-width: 240px;         /* keep it from being too large */
+  display: block;
+  margin: 0 auto;           /* center the image */
+}
+
+.quote {
+  background: #e6f7e6;   /* very light green background */
+  border: none;          /* remove grey border */
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;    /* optional: soft corners */
+  font-style: italic;    /* optional: make it feel like a quote */
+}
+
+
+/* ===== Divider band (big message) ===== */
+  .band {
+  background-image: url("../images/homemiddlecover.jpg"); 
+  background-size: cover;        /* makes it cover the whole band */
+  background-position: center;   /* centers the image */
+  background-repeat: no-repeat;
+  text-align: center;            /* center the text */
+  padding: 200px 20px;  
+  margin: 24px 0;
+  margin-bottom: 0px;
+  position: relative;            /* allows overlay if needed */
+  color: #000;                   /* text color */
+  width: 100vw;                  /* full width of viewport */
+  margin-left: calc(-50vw + 50%); /* escape any parent container */
+}
+
+.band::before {
+  content: "";                   /* overlay for readability */
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.3); /* more transparent (was 0.6) */
+  z-index: 1;
+}
+
+.band h2, 
+.band p {
+  position: relative;            /* make text sit on top of overlay */
+  z-index: 2;
+}
+
+.band-line {
+  margin: 0 0 10px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.band-sub {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.recipe-preview {
+  padding: 60px 20px;
+}
+
+.recipe-row {
+  display: flex;
+  gap: 40px;                  /* space between image and text */
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.recipe-image img {
+  max-width: 350px;           /* image size */
+  width: 100%;
+  border-radius: 8px;
+}
+
+.recipe-info {
+  max-width: 600px;           /* width for text box */
+}
+
+.recipe-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.recipe-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-recipe {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #28be5a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn-recipe:hover {
+  background: #1e9b49; /* darker green hover */
+}
+
+/* ===== Footer (newsletter + socials) ===== */
+.footer {
+  background: #00562e;       /* footer grey */
+  margin-top: 10px;
+  width: 100vw;                  /* full width of viewport */
+  margin-left: calc(-50vw + 50%); /* escape any parent container */
+}
+.footer-row {
+  display: flex;
+  justify-content: space-between; /* spread newsletter & socials */
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px 40px;
+  max-width: 1100px;
+  margin: 0 auto; /* center inside footer */
+}
+.newsletter {
+  background: #ffffff;       /* light panel behind form */
+  border: 2px solid #ffffff; /* darker border like wireframe */
+  padding: 14px;             /* inner space */
+  flex: 1;                   /* take available width */
+  max-width: 520px;          /* similar size to mock */
+}
+.small { color: #000000; font-size: 14px; }
+.tiny  { color: #ffffff; font-size: 12px; }
+.newsletter-form {
+  display: flex;             /* input and button in one line */
+  gap: 8px;                  /* small space between them */
+  margin-top: 8px;           /* space above the form */
+}
+.newsletter-form input {
+  flex: 1;                   /* input fills space */
+  padding: 10px;             /* inner space */
+  border: 1px solid #000;    /* thin border like wireframe */
+  border-radius: 6px;        /* slightly rounded corners */
+}
+.socials { flex: 1; text-align: center; } /* socials block on right */
+.social-dots {
+  display: flex;             /* dots in a row */
+  justify-content: center;   /* center them */
+  gap: 30px;                 /* space between dots */
+  margin: 10px 0;            /* space around dots */
+}
+
+.dot {
+  width: 60px;              /* circle size */
+  height: 60px;
+  border-radius: 50%;       /* make it a circle */
+  overflow: hidden;         /* hide anything that sticks out */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;         /* optional: white background behind icon */
+  
+}
+
+.dot img {
+  width: 100%;              /* force image to fit circle */
+  height: 100%;             /* stretch to match container */
+  object-fit: cover;        /* crop to avoid distortion */
+}
+
+.social-labels {
+  list-style: none;          /* remove bullets */
+  display: flex;             /* names in a row */
+  gap: 28px;                 /* space between names */
+  justify-content: center;   /* center them */
+  padding: 0; margin: 0;     /* remove default ul spacing */
+  color: #ffffff;               /* grey text */
+  font-size: 14px;           /* small size */
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;               /* space between the icons */
+  justify-content: center; /* center them horizontally */
+  margin-top: 12px;
+}
+
+.copy {
+  border-top: 1px solid #cfcfcf; 
+  text-align: center;        
+  padding: 10px 0 16px;      
+  color: #fff; 
+}
+
+/* ===== Very basic responsiveness for phones ===== */
+@media (max-width: 800px) {
+  .hero-row { flex-direction: column; }           /* stack hero items */
+  .highlights-row { flex-direction: column; }     /* stack tip & quotes */
+  .footer-row { flex-direction: column; }         /* stack newsletter & socials */
+  .feature-img { width: 100%; }                   /* feature image fits small screens */
+}
+
+/* RECIPES PAGE STYLES */
+
+.recipe-grid {
+  display: flex;           /* puts recipe cards in a row */
+  flex-wrap: wrap;         /* wrap to next line if needed */
+  gap: 50px;               /* space between cards */
+  justify-content: center; /* center the row */
+  margin: 40px 0;
+}
+
+.recipe-card {
+  background: #fff;        /* white card */
+  border-radius: 10px;     /* rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* light shadow */
+  width: 280px;            /* fixed card width */
+  padding: 16px;
+  text-align: center;      /* center text inside */
+  transition: transform 0.2s ease; /* hover effect */
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px); /* lifts card on hover */
+}
+
+.recipe-card img {
+  width: 100%;             /* make image fit card */
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.view-btn {
+  background: #008000;     /* green to match your theme */
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.view-btn:hover {
+  background: #006400;     /* darker green on hover */
+}
+
+/*nav active link*/
+nav a.active {
+  color: #008000;          /* green to match your theme */
+  font-weight: bold;
+  border-bottom: 2px solid #008000; /* underline effect */
+}
+
+
+
+/* Close button */
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.close-btn {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Modal background */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal content box */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 700px;
+  width: 90%;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+/* Modal image */
+#modal-image {
+  max-width: 100%;   /* prevents overflowing horizontally */
+  max-height: 300px; /* adjust this number to control height */
+  object-fit: cover; /* crop nicely instead of squishing */
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 16px auto; /* center it and add bottom spacing */
+}
+
+
+/* ===== MINDFULNESS PAGE ===== */
+.mindfulness {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.mindfulness section {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+/* Breathing Circle */
+#breathing-circle {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: #28be5a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  transform: scale(1);                  /* start small */
+  transition: transform 4s ease-in-out; /* smooth grow/shrink */
+
+}
+
+/* Timer Display */
+#timer-display {
+  font-size: 24px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Sound buttons */
+.sound-btn {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #eee;
+  cursor: pointer;
+}
+.sound-btn:hover {
+  background: #ddd;
+}
+
+
+/*====Contact Page====*/ 
+
+/* ===== FAQ Accordion ===== */
+.faq-section {
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  background: #008000;
+  color: #fff;
+  text-align: left;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.faq-question.active {
+  background: #006400;
+}
+
+
+
+/* ===== Contact Form ===== */
+.contact-form {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 100px 1fr; /* label column + input column */
+  gap: 12px 16px;
+  align-items: center;
+}
+
+.contact-form label {
+  text-align: right;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  grid-column: 2 / 3; /* span across only input column */
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contact-form button {
+  grid-column: 2 / 3; /* button aligned under input column */
+  width: 100px;
+  padding: 8px;
+  background: #eee;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #ddd;
+}
+
+.confirm {
+  grid-column: 2 / 3;
+  margin-top: 10px;
+  font-size: 14px;
+}
+/* ============================================
+   CALCULATOR PAGE (scoped so other pages unaffected)
+   ============================================ */
+.calc-main{
+  max-width: 1000px;
+  margin: 28px auto;
+  padding: 0 10px;
+}
+
+/* Only style cards inside .calc-main to avoid collisions */
+.calc-main .card{
+  background:#fff;
+  border:1px solid #e6e6e6;
+  border-radius:10px;
+  padding:18px;
+  margin-bottom:20px;
+  box-shadow:0 2px 6px rgba(0,0,0,.06);
+}
+
+.calc-main .card-title{
+  margin:0 0 14px;
+  font-size:22px;
+}
+
+/* ===== Form ===== */
+.calc-form{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:14px;
+}
+
+.calc-form label{ display:flex; flex-direction:column; gap:6px; }
+.calc-form span{ font-size:14px; color:#333; }
+
+.calc-form input,
+.calc-form select{
+  padding:10px;
+  border:1px solid #bbb;
+  border-radius:6px;
+  font-size:16px;
+}
+
+.calc-form .btn{ grid-column:1 / -1; width:max-content; padding:10px 16px; }
+.error{ grid-column:1 / -1; color:#b40000; margin:0; }
+
+@media (max-width: 700px){
+  .calc-form{ grid-template-columns: 1fr; }
+}
+
+/* ===== Results ===== */
+.result-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:16px;
+}
+
+.result-item{
+  background:#f7f7f7;
+  border:1px solid #e6e6e6;
+  border-radius:8px;
+  padding:12px;
+}
+
+.result-item h3{ margin:0 0 6px; font-size:16px; font-weight:600; }
+.number{ font-size:24px; font-weight:700; }
+
+@media (max-width: 700px){
+  .result-grid{ grid-template-columns: 1fr; }
+}
+
+/* ===== Macros ===== */
+.macro-wrap{ margin-top:16px; display:grid; gap:12px; }
+
+.macro-head{
+  display:flex;
+  justify-content:space-between;
+  font-weight:600;
+}
+
+.bar{
+  height:12px;
+  background:#eee;
+  border-radius:100px;
+  overflow:hidden;
+  border:1px solid #ddd;
+}
+
+/* inner span width is set by JS */
+.bar > span{
+  display:block;
+  height:100%;
+  width:0;
+  transition: width .6s ease;
+  border-radius:100px;
+}
+
+#carb-bar{    background:#28be5a; }  /* green  */
+#protein-bar{ background:#2b7de9; }  /* blue   */
+#fat-bar{     background:#f7a11a; }  /* orange */
+
+.hint{ 
+  margin-top:10px; 
+  color:#555; 
+  font-size:13px; 
+}
+
+
+
+
+/* ===== Workout Page ===== */
+.workout {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.workout-form, .workout-plan {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.workout-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.workout-form select, .workout-form button {
+  margin-top: 6px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+}
+
+#generate-btn {
+  margin-top: 15px;
+  background: #28be5a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+#generate-btn:hover {
+  background: #1d8a44;
+}
+
+/* Workout list */
+#exercise-list {
+  list-style: none;
+  padding: 0;
+}
+#exercise-list li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #f6f6f6;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Timer styling */
+.timer-box {
+  margin-top: 20px;
+  text-align: center;
+}
+#timer-display {
+  font-size: 28px;
+  margin: 10px 0;
+  padding: 10px;
+  background: #eee;
+  border-radius: 6px;
+}
+
