@@ -102,7 +102,7 @@
  /*image under the rotating text*/
 .hero-full {
   min-height: 400px; /* height of hero */
-  background-image: url("../images/Homepage1.jpg"); /* // link your hero image */
+  background-image: url("../images/homepage1.jpg"); /* // link your hero image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -819,4 +819,5 @@ nav a.active {
   background: #eee;
   border-radius: 6px;
 }
+
 
